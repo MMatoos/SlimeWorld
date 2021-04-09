@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         editorController = GameObject.FindGameObjectWithTag("TestSave").GetComponent<EditorController>();
-        zoom = 0;
+        zoom = 1;
     }
 
     private void Update()
@@ -42,42 +42,45 @@ public class CameraController : MonoBehaviour
 
     public void MoveRight()
     {
-        cam.transform.position += new Vector3(1, 0, 0);
+        int move = 2 * zoom + 1;
+        cam.transform.position += new Vector3(move, 0, 0);
     }
     
     public void MoveLeft()
     {
-        cam.transform.position += new Vector3(-1, 0, 0);
+        int move = 2 * zoom + 1;
+        cam.transform.position += new Vector3(-move, 0, 0);
     }
     
     public void MoveUp()
     {
+        int move = 2 * zoom + 1;
         cam.transform.position += new Vector3(0, 1, 0);
     }
     
     public void MoveDown(int x)
     {
+        int move = 2 * zoom + 1;
         cam.transform.position += new Vector3(0, -1, 0);
-        Debug.Log(x);
     }
 
     public void ZoomIn()
     {
-        if (zoom != 1)
+        if (zoom != 0)
         {
             pixelCam.refResolutionX /= 2;
             pixelCam.refResolutionY /= 2;
-            zoom++;
+            zoom--;
         }
     }
     
     public void ZoomOut()
     {
-        if (zoom != -1)
+        if (zoom != 2)
         {
             pixelCam.refResolutionX *= 2;
             pixelCam.refResolutionY *= 2;
-            zoom--;
+            zoom++;
         }
     }
 }
