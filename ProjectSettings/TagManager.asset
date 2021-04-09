@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Health Controller
+  - Bullet
+  - Screen Shake
+  - Ground
+  - Builder
+  - Tilemap
+  - Spawn
+  - PlayerSpawn
+  - MCamera
+  - TestSave
+  - GameCanvas
+  - EditorCanvas
+  - Enemy
+  - SaveLoadNumber
+  - StatsUI
+  - Win Point
+  - WinPointSpawn
+  - Menu Controller
+  - Game Controller
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Enemy
+  - Ground
+  - Bullet
+  - Background Image
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 682900327
+    locked: 0
+  - name: Enemies
+    uniqueID: 3682704479
+    locked: 0
+  - name: Player
+    uniqueID: 1346894741
+    locked: 0
+  - name: Particles
+    uniqueID: 3068781287
+    locked: 0
+  - name: Bullet
+    uniqueID: 1055991833
+    locked: 0
