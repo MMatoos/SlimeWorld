@@ -217,7 +217,7 @@ MonoBehaviour:
   healthController: {fileID: 0}
   knockbackDelay: 5
   blood: {fileID: 759576178545812386, guid: d888645c7659305429b889b695bfbaa8, type: 3}
-  hp: 200
+  hp: 100
 --- !u!1 &1237389384108268220
 GameObject:
   m_ObjectHideFlags: 0
