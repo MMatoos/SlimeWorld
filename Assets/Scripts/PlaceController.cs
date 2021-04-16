@@ -127,10 +127,7 @@ public class PlaceController : MonoBehaviour
                 for (int i = 0; i < fillSize + 1; i++)
                 {
                     currentPos = pos + startPos + new Vector3Int(0, i, 0);
-                    if (!tilemap.HasTile(currentPos)) 
-                    {
-                        tilemap.SetTile(currentPos, tile);
-                    }
+                    tilemap.SetTile(currentPos, tile);
                 }
             }
             else if(actualMode == Mode.Place)
