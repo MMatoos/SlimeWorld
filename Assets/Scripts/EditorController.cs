@@ -89,6 +89,7 @@ public class EditorController : MonoBehaviour
             Destroy(winFlag);
 
             savedGame = SaveManager.Load("testedLevel");
+            Cursor.visible = true;
             LoadEnemies();
             LoadPlayerSpawn();
             LoadWinPoint();
@@ -105,6 +106,7 @@ public class EditorController : MonoBehaviour
                                                                    || (isCompleted && isTesting && !isEditor))
         {
             gameController.actualMode = GameController.SceneMode.Menu;
+            Cursor.visible = true;
             SceneManager.LoadScene("Select Level");
         }
 
@@ -131,6 +133,7 @@ public class EditorController : MonoBehaviour
             statsController.SaveStats();
             SaveManager.Save(savedGame, "testedLevel"); //save
 
+            Cursor.visible = false;
             SpawnPlayer();
             SpawnEnemies();
             SpawnWinPoint();
@@ -171,14 +174,17 @@ public class EditorController : MonoBehaviour
             if (gameController.actualMode == GameController.SceneMode.Tutorial)
             {
                 savedGame = SaveManager.Load("tutorial");
+                Cursor.visible = false;
             }
             else if (gameController.actualMode == GameController.SceneMode.Zoo)
             {
                 savedGame = SaveManager.Load("zoo");
+                Cursor.visible = false;
             }
             else if (gameController.actualMode == GameController.SceneMode.Parkour)
             {
                 savedGame = SaveManager.Load("parkour");
+                Cursor.visible = false;
             }
             else
             {
